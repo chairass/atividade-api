@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #833AB4;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%); 
+    
+}
+
+h1{
+    margin-top: 50px;
+    font-size: 50px;
+    color: #ffffff;
+    font-family: 'Caprasimo', cursive;
+    margin-top: 4.5rem;
+}
+
+.countdown{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.text{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1;
+    margin: 1rem 2rem;
+    color: #ffffff;
+}
+
+.countdown-el{
+    text-align: center;
+}
+
+.countdown-el span{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #e1bdbd;
+}   
