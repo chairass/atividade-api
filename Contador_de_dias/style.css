@@ -1,52 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-
-*{
-    box-sizing: border-box;
+/* estilo.css */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #8e2de2, #ff3d00, #ff8c00);
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background: #833AB4;
-    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%); 
-    
+form {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  backdrop-filter: blur(8px); /* efeito vidro */
 }
 
-h1{
-    margin-top: 50px;
-    font-size: 50px;
-    color: #ffffff;
-    font-family: 'Caprasimo', cursive;
-    margin-top: 4.5rem;
+form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
 }
 
-.countdown{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
+form input {
+  margin: 8px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
 }
 
-.text{
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    font-size: 6rem;
-    line-height: 1;
-    margin: 1rem 2rem;
-    color: #ffffff;
+form input[type="text"],
+form input[type="password"] {
+  background: rgba(255,255,255,0.9);
+  outline: none;
 }
 
-.countdown-el{
-    text-align: center;
+form input[type="submit"] {
+  background: #ff3d00;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.countdown-el span{
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 500;
-    font-size: 1.5rem;
-    color: #e1bdbd;
-}   
+form input[type="submit"]:hover {
+  background: #e23300;
+}
+
+.erro {
+  font-size: 13px;
+  color: #ff4444;
+  margin: 4px 0 8px 4px;
+  display: none;
+}

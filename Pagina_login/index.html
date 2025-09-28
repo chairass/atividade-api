@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teste Validação</title>
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+    /* Estilo básico para exibir as mensagens de erro (coloque no seu style.css) */
+    .erro {
+      color: red;
+      font-size: 0.9em;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+    .erro ul {
+      list-style-type: none; /* Remove bolinhas da lista */
+      padding-left: 0;
+    }
+    .erro li {
+      margin-left: 0;
+    }
+  </style>
+</head>
+<body>
+  <form onsubmit="return false;">
+    <h3>Login</h3>
+    <input type="email" placeholder="name@example.com" id="login">
+    <div id="msgErroEmail" class="erro" style="display: none;">E-mail inválido.</div> 
+    
+    <input type="password" placeholder="Senha" id="senha">
+    
+    <div id="msgErroSenha" class="erro" style="display: none;">
+      A senha deve cumprir:
+      <ul>
+        <li id="req-length">✅ Ter no mínimo 6 caracteres.</li>
+        <li id="req-lower">✅ Ter pelo menos 1 letra minúscula ('a'-'z').</li>
+        <li id="req-upper">✅ Ter pelo menos 1 letra maiúscula ('A'-'Z').</li>
+        <li id="req-special">✅ Ter pelo menos 1 caractere não alfanumérico.</li>
+      </ul>
+    </div>
+    
+    <input type="submit" value="Entrar" id="login-button" disabled>
+  </form>
+  <script src="script.js" defer></script>
+</body>
+</html>
