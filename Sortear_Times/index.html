@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>1. Adicionar Nomes</h2>
+        <form id="formularioDuplas">
+            <label for="jogador1">Nome do Jogador 1:</label>
+            <input type="text" id="jogador1">
+
+            <label for="jogador2">Nome do Jogador 2:</label>
+            <input type="text" id="jogador2">
+
+            <button type="submit" id="botaoSalvarDupla">Salvar Dupla</button>
+        </form>
+
+        <p>Total de pessoas: <strong id="contadorNomes">0</strong></p>
+
+        <h2>2. Lista Atual de Nomes</h2>
+        <ul id="listaDeDuplas"></ul>
+
+        <h2>3. Sortear Duplas</h2>
+        <button id="sortearBotao">Sortear Duplas!</button>
+
+        <h3>Resultado do Sorteio:</h3>
+        <ul id="resultadoDuplas">
+        </ul>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
