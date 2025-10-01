@@ -1,13 +1,12 @@
-// A função que obtém os elementos deve estar disponível.
-// NOTA: É fundamental que esses IDs existam no seu HTML!
 const inputJogador1 = document.getElementById('jogador1');
 const inputJogador2 = document.getElementById('jogador2');
 const formularioDuplas = document.getElementById('formularioDuplas');
 
-// Elementos para exibição no HTML (IDs corrigidos/definidos)
+// Elementos para exibição no HTML
 const contadorDuplasSpan = document.getElementById('contadorDuplas'); // ID do elemento que mostrará a contagem
 const listaDuplasUL = document.getElementById('listaDuplasCadastradas'); // ID do UL que mostrará a lista
 const todasAsDuplas = []; // Array onde armazena o resultado
+const botaoSortear = document.getElementById('sortearBotao')
 
 // --- Funções de Escopo e Eventos ---
 
@@ -107,15 +106,26 @@ if (inputJogador1 && inputJogador2) {
 
 // Inicializa a exibição ao carregar a página (mostrará 0)
 atualizarExibicaoDuplas();
-sortearDuplas();
 
 function sortearDuplas(){
     if (todasAsDuplas.length === 0) {
-  console.log("O array está vazio");
-} else if (todasAsDuplas.length % 2 === 0) {
-  console.log("O array tem quantidade PAR de elementos");
-} else {
-  console.log("O array tem quantidade ÍMPAR de elementos");
+        alert('Nenhuma dupla cadastrada!'); // mostra que não tem dupla
+        return;
+}   else if (todasAsDuplas.length % 2 === 0) {
+
+        const totalDuplas =  todasAsDuplas.length;
+
+        for (let i = 0; i < totalDuplas; i += 2){
+            const dupla1 = todasAsDuplas[i];
+            const dupla2 = todasAsDuplas[i + 1];
+
+            chaveamento.push(dupla1.join(" e ") + " vs " + dupla2.join(" e "));
+        }
+        
+}   else {
+        alert("A quantida de duplas é impar");
 }
 }
 
+document.getElementById("botaoSortear").addEventListener("click", sortearDuplas);
+document.getElementById('resultadoDuplas').innerHTML = chaveamento.join("<br>");
