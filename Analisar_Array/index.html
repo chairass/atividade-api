@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <title>Análise de Números</title>
 </head>
 <body>
-    <form>
-        <input type="text" id="numeros" placeholder="Ex.: 1, 2, 3...">
-        <div>
-            <h3>O maior número é</h3>
-            <span id="maiorNumero"></span>
-        </div>
-        <div>
-            <h3>O menor número é</h3>
-            <span id="menorNumero"></span>
-        </div>
-        <div>
-            <h3>A média da soma dos numeros é</h3>
-            <span id="mediaNumero"></span>
-        </div>
-        <button type="submit">Analisar</button>
-    </form>
-<script src="script.js" defer></script>   
+    <h1>Análise Estatística de Números</h1>
+
+    <div>
+        <label for="numeros">Insira números separados por vírgula:</label>
+        <input type="text" id="numeros" placeholder="Ex: 10, 5, 20, 8">
+        
+        <button onclick="processarNumeros()">Calcular</button>
+    </div>
+
+    <hr>
+
+    <div id="resultados">
+        <h3>Resultados:</h3>
+        <p>Maior Número: <span id="maiorNumero">--</span></p>
+        <p>Menor Número: <span id="menorNumero">--</span></p>
+        <p>Média: <span id="mediaNumeros">--</span></p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

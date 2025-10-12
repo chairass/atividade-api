@@ -1,18 +1,45 @@
-const maiorNumeroSpana = document.getElementById('maiorNumero')
-const menorNumeroSpana = document.getElementById('menorNumero')
-const mediaNumerosSpana = document.getElementById('mediaNumeros')
-const numeros = document.getElementById('numeros')      
+function processarNumeros() {
+    const numerosInput = document.getElementById('numeros');
+    const maiorNumeroSpana = document.getElementById('maiorNumero');
+    const menorNumeroSpana = document.getElementById('menorNumero');
+    const mediaNumerosSpana = document.getElementById('mediaNumeros');
 
-const numerosArray= []
+    
+    if (!numerosInput || !maiorNumeroSpana || !menorNumeroSpana || !mediaNumerosSpana) {
+        console.error("Erro: Um ou mais elementos HTML necessários não foram encontrados.");
+        return;
+    }
 
-numerosArray.push(numeros.value.split(',').map(Number))
+    
+    const valorDoInput = numerosInput.value.trim(); 
 
-const maiorNumero = numerosArray.find (n => n === Math.max(...numerosArray))
-const menorNumero = numerosArray.find (n => n === Math.min(...numerosArray))
-const mediaNumeros = numerosArray.reduce((a,b) => a + b, 0) / numeros.length
+    if (!valorDoInput) {
+        alert("Por favor, insira números antes de calcular.");
+        return; 
+    }
 
-console.log(numerosArray)
-console.log(mediaNumeros)
-console.log(maiorNumero)
-console.log(menorNumero)
+    
+    const numerosLidos = valorDoInput
+        .split(',')
+        .map(numero => Number(numero.trim()))
+        .filter(n => !isNaN(n));
 
+    if (numerosLidos.length === 0) {
+        alert("Nenhum número válido encontrado. Verifique sua entrada.");
+        return;
+    }
+    
+    
+    const maiorNumero = Math.max(...numerosLidos); 
+    const menorNumero = Math.min(...numerosLidos);
+
+    
+    const somaNumeros = numerosLidos.reduce((acumulador, numeroAtual) => acumulador + numeroAtual, 0);
+    const mediaNumeros = somaNumeros / numerosLidos.length;
+
+    
+    maiorNumeroSpana.textContent = maiorNumero;
+    menorNumeroSpana.textContent = menorNumero;
+    
+    mediaNumerosSpana.textContent = mediaNumeros.toFixed(2); 
+}
