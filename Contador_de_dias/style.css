@@ -1,60 +1,78 @@
-/* estilo.css */
 body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #8e2de2, #ff3d00, #ff8c00);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: white; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); 
+
+    background: #8e2de2; 
+    background: rgb(51, 51, 51);
 }
 
-form {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-  width: 320px;
-  backdrop-filter: blur(8px); /* efeito vidro */
+h1 {
+    font-size: 3em; 
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
 }
 
-form h3 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: white;
+.countdown {
+    display: flex; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+    justify-content: center;
 }
 
-form input {
-  margin: 8px 0;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  font-size: 14px;
+.countdown-el {
+    text-align: center;
+    padding: 15px 25px; 
+    border-radius: 10px;
+    
+    background: rgba(255, 255, 255, 0.1); 
+    
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    
+    backdrop-filter: blur(5px);
 }
 
-form input[type="text"],
-form input[type="password"] {
-  background: rgba(255,255,255,0.9);
-  outline: none;
+.countdown-el p.text {
+    font-size: 4em; 
+    margin: 0;
+    line-height: 1.1;
+    color: #ffcc00; 
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-form input[type="submit"] {
-  background: #ff3d00;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+.countdown-el span {
+    display: block; 
+    font-size: 0.9em;
+    font-weight: 400;
+    margin-top: 5px;
+    text-transform: uppercase;
+    opacity: 0.9;
 }
 
-form input[type="submit"]:hover {
-  background: #e23300;
-}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
 
-.erro {
-  font-size: 13px;
-  color: #ff4444;
-  margin: 4px 0 8px 4px;
-  display: none;
+    .countdown {
+        gap: 10px;
+    }
+
+    .countdown-el {
+        padding: 10px 15px;
+    }
+
+    .countdown-el p.text {
+        font-size: 2.5em; 
+    }
 }
