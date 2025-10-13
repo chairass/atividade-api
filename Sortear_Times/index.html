@@ -1,36 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sorteador de Duplas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="container">
-        <h2>1. Adicionar Nomes</h2>
-        <form id="formularioDuplas">
-            <label for="jogador1">Nome do Jogador 1:</label>
-            <input type="text" id="jogador1">
+        <h1>Sorteador de Duplas</h1>
 
-            <label for="jogador2">Nome do Jogador 2:</label>
-            <input type="text" id="jogador2">
+        <section>
+            <h2>Cadastro de Duplas</h2>
+            <form id="formularioDuplas">
+                <div>
+                    <label for="jogador1">Jogador 1:</label>
+                    <input type="text" id="jogador1" required placeholder="Nome do Jogador 1">
+                </div>
+                <div>
+                    <label for="jogador2">Jogador 2:</label>
+                    <input type="text" id="jogador2" disabled required placeholder="Nome do Jogador 2">
+                </div>
+                <button type="submit">Cadastrar Dupla</button>
+            </form>
+        </section>
 
-            <button type="submit" id="botaoSalvarDupla">Salvar Dupla</button>
-        </form>
+        <hr>
 
-        <p>Total de Duplas Salvas: <strong id="contadorDuplas">0</strong></p>
+        <section>
+            <div class="header-status">
+                <h2>Duplas Cadastradas</h2>
+                <p>Total de Duplas: <span id="contadorDuplas">0</span></p>
+            </div>
+            
+            <ul id="listaDuplasCadastradas">
+                </ul>
+            <div id="alert"></div>    
+            <button id="sortearBotao">Sortear</button>
+        </section>
 
-        <h3>Duplas Cadastradas:</h3>
-        <ul id="listaDuplasCadastradas">
-        </ul>
+        <hr>
 
-        <h2>3. Sortear Duplas</h2>
-        <button id="botaoSortear">Sortear Duplas!</button>
+        <section>
+            <h2>Resultado do Sorteio</h2>
+            <div id="resultadoDuplas">
+                <p>Clique em "Sortear Chaveamento" após cadastrar as duplas.</p>
+            </div>
+        </section>
 
-        <h3>Resultado do Sorteio:</h3>
-        <ul id="resultadoDuplas">
-        </ul>
     </div>
-    <script src="script.js" defer></script>
+
+    <script src="script.js"></script> 
+
 </body>
 </html>

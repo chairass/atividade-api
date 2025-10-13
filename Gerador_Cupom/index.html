@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Cupom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>🎁 Gerador de Código de Cupom</h1>
+    <p>Escolha o tamanho e gere um cupom alfanumérico aleatório!</p>
+
+    <div class="input-area">
+      <input type="number" id="tamanho" min="4" max="20" placeholder="Tamanho (ex: 8)">
+      <button onclick="gerarCupom()">Gerar</button>
+    </div>
+
+    <div id="resultado">
+      <p>Seu código:</p>
+      <h2 id="cupom">---</h2>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
