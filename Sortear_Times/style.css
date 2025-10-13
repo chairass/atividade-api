@@ -171,6 +171,21 @@ button {
     margin-top: 15px;
 }
 
+button {
+  margin: 30px;
+  background-color: #000000;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+#home{
+    text-decoration: none;
+    color: white;
+}
 /* Estilo para o container de cada confronto */
 .confronto-item {
     display: flex; 

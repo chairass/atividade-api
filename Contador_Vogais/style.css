@@ -5,8 +5,9 @@
   font-family: "Poppins", sans-serif;
 }
 
+
 body {
-  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  background: linear-gradient(rgb(230, 119, 163));
   color: #fff;
   height: 100vh;
   display: flex;
@@ -14,13 +15,17 @@ body {
   justify-content: center;
 }
 
+#home{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
 .container {
   background: rgba(255, 255, 255, 0.1);
   padding: 30px 40px;
   border-radius: 16px;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  width: 320px;
+  width: 400px;
 }
 
 h1 {
@@ -50,12 +55,13 @@ input {
 
 button {
   background: #fff;
-  color: #6b21a8;
+  color: #ffffff;
   border: none;
   padding: 8px 14px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
+  margin: 10px;
   transition: 0.3s;
 }
 
